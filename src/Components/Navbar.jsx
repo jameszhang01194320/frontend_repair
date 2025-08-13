@@ -5,6 +5,7 @@ import { logOut } from "../redux/userSlice";
 import { FaUser } from "react-icons/fa"; 
 import "./styles.css"; 
 import Logo from "../assets/rr_logo_transparent.png";
+import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   const dispatch = useDispatch();
@@ -46,6 +47,12 @@ const NavigationBar = () => {
       )}
 
      
+      {authToken && (
+        <Nav.Link as={NavLink} to="/pay" className="d-flex">
+          💳 Pay
+        </Nav.Link>
+      )}
+      
     </Nav>
 
     {authToken ? (

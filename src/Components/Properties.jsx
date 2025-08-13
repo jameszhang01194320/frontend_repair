@@ -22,7 +22,7 @@
 //   // Fetch user ID from API
 //   const fetchUserID = async () => {
 //     try {
-//       const response = await axios.get(`https://repair-or-replace-back-end.onrender.com/api/users/`, {
+//       const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/users/`, {
 //         headers: {
 //           "Content-Type": "application/json",
 //           Authorization: `Token ${token}`,
@@ -47,7 +47,7 @@
 //     if (!userId) return; // Ensure userId is set
 //     try {
 //       const response = await axios.get(
-//         `https://repair-or-replace-back-end.onrender.com/api/user-properties/${userID}/`,
+//         `${import.meta.env.VITE_BACKEND_URL}/api/user-properties/${userID}/`,
 //         {
 //           headers: {
 //             "Content-Type": "application/json",
@@ -80,7 +80,7 @@
 //   const deleteProperty = async () => {
 //     try {
 //       await axios.delete(
-//         `https://repair-or-replace-back-end.onrender.com/api/properties/${propertyToDelete}/`,
+//         `${import.meta.env.VITE_BACKEND_URL}/api/properties/${propertyToDelete}/`,
 //         {
 //           headers: {
 //             "Content-Type": "application/json",

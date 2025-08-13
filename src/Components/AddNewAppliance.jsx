@@ -47,7 +47,7 @@ const NewAppliance = () => {
     
       try {
         const response = await axios.post(
-          "https://repair-or-replace-back-end.onrender.com/api/decode-appliance/",
+          "${import.meta.env.VITE_BACKEND_URL}/api/decode-appliance/",
           applianceData,
           {
             headers: {

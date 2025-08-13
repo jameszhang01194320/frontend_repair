@@ -18,7 +18,7 @@ import LoginForm from "./Components/Login";
 import EditProfile from "./Components/EditProfile";
 import AddRepair from "./Components/AddRepair";
 import AddInvestment from "./Components/AddInvestment";
-
+import PayPage from "./Components/PayPage"; // 注意路径
 
 
 
@@ -55,7 +55,7 @@ function App() {
             <Route path="/edit-profile" element={<EditProfile />} />
             <Route path="/addinvestment" element={<AddInvestment />} />
             <Route path="/addrepair" element={<AddRepair />} />
-
+            <Route path="/pay" element={<PayPage />} />
 
 
           </>

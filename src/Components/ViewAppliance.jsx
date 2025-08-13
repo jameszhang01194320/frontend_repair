@@ -41,7 +41,7 @@
 //   const fetchApplianceDetailsFromModel = async (model) => {
 //     try {
 //       const response = await axios.get(
-//         `https://repair-or-replace-back-end.onrender.com/api/appliance-details-from-api/`,
+//         `${import.meta.env.VITE_BACKEND_URL}/api/appliance-details-from-api/`,
 //         {
 //           headers: {
 //             "Content-Type": "application/json",
@@ -55,7 +55,7 @@
 //       console.log("Matching appliance:", matchingAppliance);
 //       if (matchingAppliance) {
 //         const detailedResponse = await axios.get(
-//           `https://repair-or-replace-back-end.onrender.com/api/appliance-details-from-api/${matchingAppliance.id}/`,
+//           `${import.meta.env.VITE_BACKEND_URL}/api/appliance-details-from-api/${matchingAppliance.id}/`,
 //           {
 //             headers: {
 //               "Content-Type": "application/json",
@@ -641,7 +641,7 @@ const ViewAppliance = () => {
   const fetchApplianceDetailsFromModel = async (model) => {
     try {
       const response = await axios.get(
-        `https://repair-or-replace-back-end.onrender.com/api/appliance-details-from-api/`,
+        `${import.meta.env.VITE_BACKEND_URL}/api/appliance-details-from-api/`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -655,7 +655,7 @@ const ViewAppliance = () => {
       console.log("Matching appliance:", matchingAppliance);
       if (matchingAppliance) {
         const detailedResponse = await axios.get(
-          `https://repair-or-replace-back-end.onrender.com/api/appliance-details-from-api/${matchingAppliance.id}/`,
+          `${import.meta.env.VITE_BACKEND_URL}/api/appliance-details-from-api/${matchingAppliance.id}/`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -739,7 +739,7 @@ useEffect(() => {
         if (response.data.model) {
           try {
             const applianceDetailsResponse = await axios.get(
-              `https://repair-or-replace-back-end.onrender.com/api/appliance-details-from-api/`,
+              `-back-end.onrender.com/api/appliance-details-from-api/`,
               {
                 headers: {
                   "Content-Type": "application/json",
@@ -752,7 +752,7 @@ useEffect(() => {
             );
             if (matchingAppliance) {
               const detailedResponse = await axios.get(
-                `https://repair-or-replace-back-end.onrender.com/api/appliance-details-from-api/${matchingAppliance.id}/`,
+                `${import.meta.env.VITE_BACKEND_URL}/api/appliance-details-from-api/${matchingAppliance.id}/`,
                 {
                   headers: {
                     "Content-Type": "application/json",
